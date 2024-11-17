@@ -1,0 +1,28 @@
+/*Ventas Totales por Año*/
+SELECT 
+    [Date].[Calendar Year].MEMBERS ON ROWS,
+    [Measures].[Total Excluding Tax] ON COLUMNS
+FROM 
+    [Wide World Importers DW];
+
+
+/*Ventas Totales por Cliente y Producto*/
+SELECT 
+    [Measures].[Total Excluding Tax] ON COLUMNS,
+    NONEMPTYCROSSJOIN(
+        [Customer].[Customer].[Customer].MEMBERS,
+        [Stock Item].[Stock Item].[Stock Item].MEMBERS
+    ) ON ROWS
+FROM 
+    [Wide World Importers DW];
+
+
+/*Ventas Totales por Categoría de Producto y por Mes*/
+SELECT 
+    [Measures].[Total Excluding Tax] ON COLUMNS,
+    NONEMPTYCROSSJOIN(
+        [Date].[Month].MEMBERS,
+        [Stock Item].[Stock Item].[Stock Item].MEMBERS
+    ) ON ROWS
+FROM 
+    [Wide World Importers DW];

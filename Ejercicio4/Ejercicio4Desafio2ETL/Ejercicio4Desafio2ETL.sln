@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35130.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Ejercicio4Desafio2ETL", "Ejercicio4Desafio2ETL.dtproj", "{26C35FAE-D4B4-4194-B97E-45D01C48BC1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26C35FAE-D4B4-4194-B97E-45D01C48BC1F}.Development|Default.ActiveCfg = Development
+		{26C35FAE-D4B4-4194-B97E-45D01C48BC1F}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E8968C7-90FA-4007-A528-947052FDC01D}
+	EndGlobalSection
+EndGlobal

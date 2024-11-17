@@ -1,0 +1,28 @@
+/* Ventas Totales por Año*/
+SELECT 
+    {[Measures].[SalesAmount]} ON COLUMNS, 
+    [Dim Date].[Calendar Year].[Calendar Year].ALLMEMBERS ON ROWS
+FROM 
+    [Adventure Works DW2017];
+
+/*Ventas Totales por Cliente y Producto*/
+
+SELECT 
+    {[Measures].[SalesAmount]} ON COLUMNS, 
+    NONEMPTYCROSSJOIN(
+        [Dim Customer].[Customer Key].[Customer Key].ALLMEMBERS,
+        [Dim Product].[Spanish Product Name].[Spanish Product Name].ALLMEMBERS
+    ) ON ROWS
+FROM 
+    [Adventure Works DW2017];
+
+/*Ventas Totales por Cliente y Producto*/
+
+SELECT 
+    {[Measures].[SalesAmount]} ON COLUMNS, 
+    NONEMPTYCROSSJOIN(
+        [Dim Product].[Spanish Product Category Name].[Spanish Product Category Name].ALLMEMBERS,
+        [Dim Date].[Spanish Month Name].[Spanish Month Name].ALLMEMBERS
+    ) ON ROWS
+FROM 
+    [Adventure Works DW2017];
